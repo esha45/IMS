@@ -1,0 +1,304 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{66F2A6B9-154E-44D0-A73E-78C15F10412D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>IMS</RootNamespace>
+    <AssemblyName>IMS</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.3500.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
+    <Reference Include="SkinSoft.OSSkin, Version=3.2.0.0, Culture=neutral, PublicKeyToken=669afa176ca71378, processorArchitecture=MSIL" />
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Controller\CategoriesController.cs" />
+    <Compile Include="Controller\LoginController.cs" />
+    <Compile Include="Controller\ProductPricingController.cs" />
+    <Compile Include="Controller\ProductsController.cs" />
+    <Compile Include="Controller\PurchaseInvoiceController.cs" />
+    <Compile Include="Controller\PurchaseInvoiceDetailsController.cs" />
+    <Compile Include="Controller\SalesController.cs" />
+    <Compile Include="Controller\SalesReturnController.cs" />
+    <Compile Include="Controller\SupplierController.cs" />
+    <Compile Include="Controller\UsersController.cs" />
+    <Compile Include="View\Categories.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Categories.Designer.cs">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Deletion.cs" />
+    <Compile Include="View\HomeScreen.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\HomeScreen.Designer.cs">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Insertion.cs" />
+    <Compile Include="View\Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\MainClass.cs" />
+    <Compile Include="View\MDI.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\MDI.Designer.cs">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ProductPricing.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ProductPricing.Designer.cs">
+      <DependentUpon>ProductPricing.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Products.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Products.Designer.cs">
+      <DependentUpon>Products.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Controller\Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="View\PurchaseInvoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PurchaseInvoice.Designer.cs">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\PurchaseInvoiceDetails.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\PurchaseInvoiceDetails.Designer.cs">
+      <DependentUpon>PurchaseInvoiceDetails.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sales.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sales.Designer.cs">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\SalesReturn.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\SalesReturn.Designer.cs">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sample.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sample.Designer.cs">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Sample2.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Sample2.Designer.cs">
+      <DependentUpon>Sample2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Selection.cs" />
+    <Compile Include="View\Stocks.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Stocks.Designer.cs">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\Supplier.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Supplier.Designer.cs">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Model\Updation.cs" />
+    <Compile Include="View\Users.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\Users.Designer.cs">
+      <DependentUpon>Users.cs</DependentUpon>
+    </Compile>
+    <Compile Include="View\ViewSalesReceipts.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="View\ViewSalesReceipts.Designer.cs">
+      <DependentUpon>ViewSalesReceipts.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="View\Categories.resx">
+      <DependentUpon>Categories.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\HomeScreen.resx">
+      <DependentUpon>HomeScreen.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\MDI.resx">
+      <DependentUpon>MDI.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ProductPricing.resx">
+      <DependentUpon>ProductPricing.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Products.resx">
+      <DependentUpon>Products.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <SubType>Designer</SubType>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PurchaseInvoice.resx">
+      <DependentUpon>PurchaseInvoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\PurchaseInvoiceDetails.resx">
+      <DependentUpon>PurchaseInvoiceDetails.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sales.resx">
+      <DependentUpon>Sales.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\SalesReturn.resx">
+      <DependentUpon>SalesReturn.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sample.resx">
+      <DependentUpon>Sample.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Sample2.resx">
+      <DependentUpon>Sample2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Stocks.resx">
+      <DependentUpon>Stocks.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Supplier.resx">
+      <DependentUpon>Supplier.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\Users.resx">
+      <DependentUpon>Users.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="View\ViewSalesReceipts.resx">
+      <DependentUpon>ViewSalesReceipts.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\back.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\homescreen.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\users.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\users.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\products.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\supply.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\PurchaseInvoice.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\sales.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\categories.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\stock.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\pricing.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\refund.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\login.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\logout.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\add.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\delete.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="bin\Images\view.png" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
